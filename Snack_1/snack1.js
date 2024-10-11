@@ -30,6 +30,7 @@ console.log(bici_array);
 const biciEl = document.getElementById("bici");
 
 /*
+// volevo ciclare nell'array e prendere l'indice dell'oggetto con il valore minore di peso
 // prendo i pesi col ciclo for in
 const pesi_array = [];
 let peso_singolo;
