@@ -58,3 +58,22 @@ console.log(leggera);
 
 // metto in pagina
 biciEl.innerHTML = (`<h3>La bici più leggera è: ${leggera.nome} e pesa ${leggera.peso} kg</h3>`);
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CORREZIONE
+
+// bastava fare la variabile leggera = bici[0]
+// poi un ciclo for : prendo il peso della prima bici, lo confronto con se stesso e poi con gli altri
+
+leggera = bici_array[0];
+
+for (let i = 0; i < bici_array.length; i++) {
+    const bici_singola = bici_array[i];
+    
+    if (bici_singola.peso < leggera.peso) {
+        leggera = bici_singola;
+    }
+}
+
+console.log(leggera);
