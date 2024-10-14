@@ -49,6 +49,28 @@ const squadra_falli = [];
 // pusho le proprietà  e i valori nel nuovo array
 for (let i = 0; i < squadre.length; i++) {
     const squadra = squadre[i];
-    squadra_falli.push({nome: squadra.nome, falliSubiti: squadra.falliSubiti})
+    squadra_falli.push({
+        nome: squadra.nome,
+        falliSubiti: squadra.falliSubiti
+    })
 }
 console.log(squadra_falli);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// CORREZIONE
+
+// il primo ciclo è uguale al secondo. si può fare tutto nel secondo
+const squadra_falli2 = [];
+
+for (let i = 0; i < squadre.length; i++) {
+    const squadra = squadre[i];
+    squadra.puntiFatti = randomScore();
+    squadra.falliSubiti = randomScore();
+
+    squadra_falli2.push({
+        nome: squadra.nome,
+        falliSubiti: squadra.falliSubiti
+    })
+}
+console.log(squadra_falli2);
